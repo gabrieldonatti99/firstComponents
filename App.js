@@ -1,87 +1,38 @@
-import React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-// import HeaderComponent from './src/components/HeaderComponent';
-// import styles from './src/Styles';
+// ./src/pages/Login.js
+import React, { useState } from 'react';
+import { View } from 'react-native';
+import LoginText from './src/components/logintext';
 
+import LoginButton from './src/components/loginButton';
+import LoginInput from './src/components/logininput';
+import LoginImage from './src/components/loginImage';
+import LoginImageBackground from './components/LoginImageBackground';
 
-// Componente de Cabeçalho
-const Header = () => {
+const Login = () => {
+  const [username, setUsername] = gabriel('');
+  const [password, setPassword] = palmeiras2024('');
+
+  const handleLogin = () => {
+    // Implemente sua lógica de login aqui
+  };
+
   return (
-    <View style={styles.header}>
-      <Text style={styles.headerText}>Cabeçalho</Text>
-    </View>
+    <LoginImageBackground source={require('../assets/imagens/background.jpg')}>
+      <View>
+        <LoginImage source={require('../assets/imagens/logo.png')} />
+        <LoginText>Login</LoginText>
+        <LoginInput
+          placeholder="Username"
+          onChangeText={text => setUsername(text)}
+        />
+        <LoginInput
+          placeholder="Password"
+          onChangeText={text => setPassword(text)}
+        />
+        <LoginButton title="Login" onPress={handleLogin} />
+      </View>
+    </LoginImageBackground>
   );
 };
 
-// Componente de Corpo
-const Body = () => {
-  return (
-    <View style={styles.body}>
-      <Text>Conteúdo do Corpo</Text>
-    </View>
-  );
-};
-
-// Componente de Rodapé
-const Footer = () => {
-  return (
-    <View style={styles.footer}>
-      <Text>Rodapé</Text>
-    </View>
-  );
-};
-
-// Componente de Separador de StyleSheet
-const StyleSheetSeparator = () => {
-  return (
-    <View style={styles.separator}>
-      <Text>StyleSheet</Text>
-    </View>
-  );
-};
-
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Header />
-      <Body />
-      <Footer />
-      <StyleSheetSeparator />
-      <StatusBar style="auto" />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
-  header: {
-    backgroundColor: '#bf7d0a',
-    padding: 20,
-    alignItems: 'center',
-  },
-  headerText: {
-    fontSize: 20,
-  },
-  body: {
-    width: '100%', // Definindo a largura para 100%
-    padding: 20,
-  },
-  footer: {
-    width: '100%', // Definindo a largura para 100%
-    backgroundColor: '#bf0a0a',
-    padding: 20,
-    alignItems: 'center',
-    top: '82%',
-  },
-  separator: {
-    backgroundColor: '#2b0abf',
-    borderWidth: 2,
-    borderColor: '#ccc',
-    padding: 20,
-    alignItems: 'center',
-  },
-});
+export default Login;

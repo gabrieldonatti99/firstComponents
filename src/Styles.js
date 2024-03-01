@@ -1,38 +1,72 @@
-import React from 'react';
-// import { StatusBar } from 'expo-status-bar';
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native"; 
+const img1 = { uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7QACnPVt05VA96sn1zx3skkQZDqB9EaRLPg&usqp=CAU'}
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
+
     container: {
-        flex: 1,
-        backgroundColor: '#fff',
+      flex: 1,
+      backgroundColor: 'orange',
+      
+      
+      
+      
+      
+      
+    
     },
-    header: {
-        backgroundColor: '#bf7d0a',
-        padding: 20,
-        alignItems: 'center',
+    input: {
+      height: 40,
+      borderColor: 'black',
+      borderWidth: 1,
+      marginTop: 10,
+      padding: 8,
+      width: '100%',
+      backgroundColor: 'gray',
+      alignItems: 'center',
+      justifyContent: 'center'
     },
-    headerText: {
-        fontSize: 20,
+  
+    input2: {
+      height: 40,
+      borderColor: 'black',
+      borderWidth: 1,
+      marginTop: 10,
+      padding: 8,
+      width: '100%',
+      backgroundColor: 'gray',
+      
+      marginBottom: 10
+      
     },
-    body: {
-        width: '100%', // Definindo a largura para 100%
-        padding: 20,
+    Button: {
+      marginTop: 60,
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: 30,
+      
+  
     },
-    footer: {
-        width: '100%', // Definindo a largura para 100%
-        backgroundColor: '#bf0a0a',
-        padding: 20,
-        alignItems: 'center',
-        top: '82%',
+    img: {
+      width: 200,
+      height: 200,
+      marginTop: 20,
+      justifyContent: 'center',
+      alignItems: 'center',
     },
-    separator: {
-        backgroundColor: '#2b0abf',
-        borderWidth: 2,
-        borderColor: '#ccc',
-        padding: 20,
-        alignItems: 'center',
-    },
-});
 
-export default styles;
+    imageBackground: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      resizeMode: 'cover',
+      height: '100%',
+      width: '100%',
+      
+    },
+    
+  
+    imageText: {
+      color: 'Black',
+      fontSize: 58,
+    },
+  });
